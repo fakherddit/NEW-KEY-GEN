@@ -28,7 +28,7 @@ def generate_key(length=32, charset='alphanumeric', separator='', chunk_size=0):
         'alphanumeric': string.ascii_letters + string.digits,
         'alpha': string.ascii_letters,
         'numeric': string.digits,
-        'hex': string.hexdigits.lower()[:16],
+        'hex': '0123456789abcdef',
         'base64': string.ascii_letters + string.digits + '+/',
         'symbols': string.ascii_letters + string.digits + string.punctuation,
     }

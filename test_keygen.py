@@ -43,7 +43,7 @@ class TestKeyGen(unittest.TestCase):
     def test_hex_charset(self):
         """Test that hex keys only contain hexadecimal characters."""
         key = generate_key(length=100, charset='hex')
-        valid_chars = set(string.hexdigits.lower()[:16])
+        valid_chars = set('0123456789abcdef')
         self.assertTrue(all(c in valid_chars for c in key))
     
     def test_chunking_with_separator(self):
