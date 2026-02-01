@@ -36,6 +36,7 @@ def get_db_connection():
         user=db.username,
         password=db.password,
         port=db.port or 5432,
+        sslmode='require'
     )
     conn.autocommit = True
     return conn
